@@ -1,0 +1,466 @@
+/*
+Samantha Oxley
+Learning Stone LLC. All rights reserved.
+*/
+body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	/* position:fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	top: 0px; */
+}
+/* Header CSS */
+header #logon input {
+	font-size: 14px;
+	padding: 4px 6px;
+} header #logon #signin {
+	font-size: 14px;
+	margin-bottom: 10px;
+} #activationSuccess{
+	border: 1px solid orange;
+	padding: 20px;
+	width: 60%;
+	margin-top: 100px;
+	margin-left: 200px;
+} #indexbanner ul{
+	display:inline;
+	margin-bottom:0px;
+} #indexbanner ul li{
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+} #indexbanner ul li:hover{
+	background-color: #E8E8E8;
+	opacity: 0.8;
+} #lightboxBackground {
+	opacity: 0.8;
+	display: none;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
+} 
+/* HTML DOCUMENT CSS */
+#outerwrapper {
+	margin: 80px 80px 20px 80px;
+	bottom: 0px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	display:block;
+	position: fixed;
+	/* text-shadow: 0px 0px 4px rgba(255, 255, 255, 1); */
+} #wrapper {
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 100%;
+} #topitems { /* top wrap */
+	top: 5%;
+	right: 5%;
+	height: 40px;
+	width: 90%;
+	position: absolute;  
+} #middleitems { /* middle wrap */
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	height: 50%;
+	width: 1024px;
+} #bottomitems { /* bottom wrap */
+	position: absolute;
+	top: 60%;
+	height: 40%;
+	width: 100%;
+}
+/* BREADCRUMB CSS */
+#breadcrumb {
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+} #breadcrumb input {
+	height: 16px;
+	font-size: 14px;
+} #breadcrumb li {
+	float: left;
+	cursor:pointer;
+} #breadcrumb li a {
+	color: white;
+	text-decoration: none;
+	padding: 10px 0px 10px 40px;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(left, #FFAC05 0%, #FF9203 100%);	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(left, #FFAC05 0%, #FF9203 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(left, #FFAC05 0%, #FF9203 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFAC05), color-stop(1, #FF9203));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(left, #FFAC05 0%, #FF9203 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to right, #FFAC05 0%, #FF9203 100%);
+	position: relative;
+	display: block;
+	float: left;
+	max-height: 20px;
+} #breadcrumb li a:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #FF9203;
+	position: absolute;	
+	top: 50%;
+	margin-top: -50px;
+	left: 100%;
+	z-index: 2;
+} 
+/* TOP ITEMS */
+#trash{
+	display: inline; 
+	float: right;
+	height: 40px;
+	width: 40px;
+	margin-right: 10px;
+} #cardNum {
+	font-size: 12px;
+	display: inline;
+	position: absolute;
+	height: 15px;
+	right: 86px;
+	top: 7px; 
+	text-align: right;
+} 
+/* MIDDLE ITEMS */
+.newCards:hover{
+	background-color: white;
+	border-radius:5px;
+	opacity:0.88;
+	cursor:pointer;
+} #addBefore{
+	position: absolute;
+	width:50px;
+	height:50px;
+	display: inline-block;
+	float: left;
+	top: 50%;
+} #addAfter{
+	position: absolute;
+	float: right;
+	right: 0px;
+	width:50px;
+	height:50px;
+	display: inline-block;
+	top: 50%;
+} #front{
+	position:absolute;
+	float: left;
+	left: 50px;
+	display:inline-block;
+	width: 45%;
+	height: 100%;
+} #back{
+	display:inline-block;
+	position:absolute;
+	width: 45%;
+	height: 100%;
+	float: right;
+	right: 50px;
+} 
+/* starCard & starring classes */
+#starCard{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	display: inline;
+	float: right;
+	right: 0px;
+	top: 0px;
+	z-index: 2;
+} .starOff{
+	background-image: url('../images/star_empty.png');
+} .starOn{
+	background-image: url('../images/star_full.png');
+} 
+/* card sides and content css */
+.cardSides{
+	position: absolute;
+	padding-top: 28px;
+	padding-right: 1px;
+	padding-bottom: 2px;
+	margin-top:30px;
+	width: 450px;
+	height: 270px;
+	background-color: white;
+	box-shadow:0px 0px 3px;
+} #side1 {
+	left: 0px;
+} #side2 {
+	right: 0px;
+} #content1, #content2{
+	border-top: 2px solid red;
+	overflow: auto; 
+	background-color: transparent;
+	-webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+} 
+.contentFull {
+	height: 227px;
+	width: 100%;
+	display:inline-block;
+	float: left;
+} .imgNone {
+	display: none;
+} .contentRight {
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	height: 227px;
+	width:225px;
+	overflow: hidden;
+} .imgLeft {
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	height: 227px;
+	width:225px;
+} .contentLeft {
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	width: 50%;
+	height: 227px;
+	overflow: hidden;
+} .imgRight{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	height: 227px;
+	width:225px;
+} .contentTop {
+	display: block;
+	position: absolute;
+	top: 28px;
+	width: 100%;
+	height: 30px;
+	overflow: hidden;
+} .imgBottom {
+	bottom: 0px;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 177px;
+} .contentNone {
+	position: absolute;
+	display: none;
+} .imgFull {
+	position: absolute;
+	top: 30px;
+	display: inline-block;
+	height: 227px;
+	width: 100%;
+}
+/* BOTTOM ITEMS */
+#color{
+	position:absolute;
+	left: 290px;
+	width: 600px;
+	height: 50px;
+} #colorSelector{
+	position: relative;
+	cursor:pointer;
+} #colorMenu{
+	display:none;
+	position:relative;
+} #colors{
+	position:relative;
+	left:40%;
+	margin-left:200px;
+	margin-right:200px;
+} .goes{ /* .class of last/next card */	
+	color: black;
+	font-size: 12px;
+} .goes:hover{
+	background-color: white;
+	border-radius:5px;
+	opacity:0.88;
+	cursor:pointer;
+} #previousCard {
+	position: absolute;
+	left: 70px;
+	color: black;
+	font-size: 10px;
+} #nextCard {
+	position: absolute;
+	right: 90px;
+	color: black;
+	font-size: 10px;
+} .disable{
+	opacity: 0.50;
+	filter: alpha(opacity=50);
+} #saving {
+	position: absolute;
+	color: black;
+	float: right;
+	right: 142px;
+	margin-right: 10px;
+	bottom: 140px;
+	font-size: 11px;
+} #saveChangesBtn {
+	position: absolute;
+	font-size: 12px;
+	height: 30px;
+	float: right;
+	right: 142px;
+	bottom: 170px;
+} #spreadCards {
+	position: absolute;
+	z-index: 400;
+	right: 0px;
+	top: 110px;
+} 
+/* SCROLL BAR, yooo */
+#cardScroll {
+	background-image: url(../images/darkbg3.png);
+	position: relative;
+	height: 140px;
+	top: 110px; 
+	bottom: 5px;
+	width: 100%;
+} #cardScroll .scrollElement {
+	position: relative;
+	float: left;
+	display: inline-block;
+	height: 120px;
+	width: 200px;
+	margin: 7px 5px 0px 2px;
+	background-color: white;
+	text-align: center;
+	overflow:hidden;
+} .scrollElement p{
+	height: 10px;
+	width: 10px;
+} .scrollImgNone{
+	position: relative;
+	display: inline-block;
+	height: 120px;
+	width: 200px;
+} .scrollImgOnly{
+	display: none;
+	position: relative;
+} .scrollImgLeft{
+	display: inline-block;
+	position: relative;
+	float: right;
+	width: 100px;
+	height: 120px;
+} .scrollImgBottom{
+	display: inline-block;
+	position: relative;
+	top: 0px;
+	height: 30px;
+	width: 200px;
+} .scrollImgRight{
+	display: inline-block;
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 120px;
+} .imageShowNone{
+	display: none;
+} .imageShowOnly{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 120px;
+	width: 200px;
+} .imageShowLeft{
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	height: 120px;
+	width: 100px;
+} .imageShowBottom{
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	height: 90px;
+	width: 200px;
+} .imageShowRight{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	height: 120px;
+	width: 100px;
+}
+.selectedThumbnail{
+	border:2px solid DarkOrange;
+}
+/* CSS FOR SORTABLE LIGHTBOX */
+#galleryPane {
+	position: fixed;
+	padding: 120px 150px 100px 150px;
+	display: none;
+	background-color: rgba(0,0,0,0.8);
+	bottom: 0px;
+	top: 0px;
+	left: 0px;
+	right: 0px; 
+	z-index: 101;
+} #closeGalleryButton {
+	display: none;
+	font-size: 15px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	z-index: 102;
+} #galleryPane .sortElement {
+	opacity: 1.0;
+	position: relative;
+	float: left;
+	display: block;
+	height: 120px;
+	width: 200px;
+	margin: 0;/*7px 5px 0px 2px;*/
+	padding: 0;
+	background-color: white;
+	text-align: center;
+	/*overflow:hidden;*/
+}#galleryList li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	float: left;
+	height: 130px;
+	width: 210px;
+} #galleryList li {
+            float: left;
+            margin: 5px;
+           counter-increment: myIndex;
+} #galleryList li:before {
+            display: block;
+            text-align: center;
+            content: counter(myIndex);
+        }
+/* FOOTER */
+footer{
+	position: fixed;
+	color: black;
+	font-size: 10px;
+	bottom: 0px;
+	left: 47%;
+}

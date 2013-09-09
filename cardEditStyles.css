@@ -1,0 +1,235 @@
+header, section, div, img, label{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: moz-none;
+	-ms-user-select: none;
+	user-select: none;
+} 
+/* IMAGE EDITING FOR FLASHCARDS */
+#imgContent1, #imgContent2{
+	background-color: white;
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center;
+	position: absolute;
+} .imgDivText{
+	margin-left:10%;
+	margin-right:10%;
+	margin-bottom:12%;
+} .imgURL{
+	width:100%;
+	z-index:60;
+} .urlDiv{
+	position:relative;
+	background-color: black;
+} #img1, #img2{
+	background-color: transparent; 
+	width:160px;
+	padding:0px 0px 0px 10px;
+	margin:0px;
+	bottom: 0px;
+	color: white;
+} #imgConfirm1, #imgConfirm2{
+	background-color: transparent;
+	display:inline;
+	text-align:center;
+	color: white;
+} 
+.removeImgOn{
+	display: inline;
+} .removeImgOff{
+	display: none;
+}
+.highlighted { border-color: red; }
+.hoverEle{
+	color: white;
+	background-color: black;
+	border-radius:10px;
+	padding:4px 8px;
+	opacity:0;
+	cursor:pointer;
+}
+.ImgLayoutButt{
+	width:30px;
+}
+.editBar{
+	position: absolute;
+	top: 10px;
+	height: 30px;
+} #editBar1{
+	left: -4px;
+} #editBar2{
+	left: 6px;
+} .edit_icon{
+	display:inline-block;
+	width:30px;
+	height:20px;
+	background-repeat:no-repeat;
+	background-position:center;
+	cursor:pointer;
+}
+/*
+MCE EDIT TOOLBAR
+*/
+.textInactive{
+	background-image:url(../images/Text_Edit_Mode_u276_normal.png);
+} .paintInactive{
+	background-image:url(../images/Draw_Mode_u214_normal.png);
+} .drawInactive{
+	background-image:url(../images/Highlight_mode_u210_normal.png);
+} .eraseInactive{
+	background-image:url(../images/Erase_Mode_u212_normal.png);
+} .eInactive{
+	background-image:url(../images/EquationEditor_u278_normal.png);
+} .imageInactive{
+	background-image:url(../images/imagelayout_u229_normal.png);
+} .textActivate{
+	background-image:url(../images/Text_Edit_Mode_u276_selected.png);
+} .paintActivate{
+	background-image:url(../images/Draw_Mode_u214_selected.png);
+} .drawActivate{
+	background-image:url(../images/Highlight_mode_u210_selected.png);
+} .eraseActivate{
+	background-image:url(../images/Erase_Mode_u212_selected.png);
+} .eActivate{
+	background-image:url(../images/EquationEditor_u278_selected.png);
+} .imageActivate{
+	background-image:url(../images/imagelayout_u229_selected.png);
+}
+/* Sub-tools */
+#subPaintTool, #subPaintToolB, #subDrawTool, #subDrawToolB, #subEraseTool, #subEraseToolB, #subImageTool, #subImageToolB{
+	display:none;
+	position:relative;
+	top:22px;
+	z-index: 50;
+} #subPaintTool, #subPaintToolB{
+	left:-120px;
+} #subDrawTool, #subDrawToolB{
+	left:-100px;
+} #subEraseTool, #subEraseToolB{
+	left:-70px;
+} #subImageTool, #subImageToolB{
+	left:-25px;
+}
+#xlBrush, #xlBrushB{
+	background-image:url(../images/u226_normal.png);
+} #lBrush, #lBrushB{
+	background-image:url(../images/u228_normal.png);
+} #mBrush, #mBrushB{
+	background-image:url(../images/u230_normal.png);
+} #sBrush, #sBrushB{
+	background-image:url(../images/u232_normal.png);
+} #xlPen, #xlPenB{
+	background-image:url(../images/u226_normal.png);
+} #lPen, #lPenB{
+	background-image:url(../images/u228_normal.png);
+} #mPen, #mPenB{
+	background-image:url(../images/u230_normal.png);
+} #sPen, #sPenB{
+	background-image:url(../images/u232_normal.png);
+} #xlEraser, #xlEraserB{
+	background-image:url(../images/u226_normal.png);
+} #lEraser, #lEraserB{
+	background-image:url(../images/u228_normal.png);
+} #mEraser, #mEraserB{
+	background-image:url(../images/u230_normal.png);
+} #sEraser, #sEraserB{
+	background-image:url(../images/u232_normal.png);
+} #noImage, #noImageB{
+	background-image:url(../images/layout1.png);
+} #leftImage, #leftImageB{
+	background-image:url(../images/layout2.png);
+} #rightImage, #rightImageB{
+	background-image:url(../images/layout3.png);
+} #botImage, #botImageB{
+	background-image:url(../images/layout4.png);
+} #fullImage, #fullImageB{
+	background-image:url(../images/layout5.png);
+}
+/* 
+	Card colors. Need to be replaced with better gradient and better compatibility
+*/
+.blueCard{
+	/* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top left, #00A2FF 0%, #0092E6 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top left, #00A2FF 0%, #0092E6 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top left, #00A2FF 0%, #0092E6 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #00A2FF), color-stop(1, #0092E6));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top left, #00A2FF 0%, #0092E6 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom right, #00A2FF 0%, #0092E6 100%);
+} .whiteCard{
+	background-image: linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 73%, rgb(255,255,255) 87%);
+	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 73%, rgb(255,255,255) 87%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 73%, rgb(255,255,255) 87%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 73%, rgb(255,255,255) 87%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 73%, rgb(255,255,255) 87%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.45, rgb(255,255,255)),
+		color-stop(0.73, rgb(255,255,255)),
+		color-stop(0.87, rgb(255,255,255))
+	);
+} .pinkCard{
+	/* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top left, #FFC9DA 0%, #E6B5C4 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top left, #FFC9DA 0%, #E6B5C4 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top left, #FFC9DA 0%, #E6B5C4 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #FFC9DA), color-stop(1, #E6B5C4));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top left, #FFC9DA 0%, #E6B5C4 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom right, #FFC9DA 0%, #E6B5C4 100%);
+} .purpleCard{
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top left, #E019FF 0%, #C516E0 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top left, #E019FF 0%, #C516E0 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top left, #E019FF 0%, #C516E0 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #E019FF), color-stop(1, #C516E0));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top left, #E019FF 0%, #C516E0 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom right, #E019FF 0%, #C516E0 100%);
+} .orangeCard{
+	/* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top left, #FFAA00 0%, #F2A200 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top left, #FFAA00 0%, #F2A200 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top left, #FFAA00 0%, #F2A200 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #FFAA00), color-stop(1, #F2A200));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top left, #FFAA00 0%, #F2A200 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom right, #FFAA00 0%, #F2A200 100%);
+} .greenCard{
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top left, #00D1D1 0%, #00DBDB 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top left, #00D1D1 0%, #00DBDB 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top left, #00D1D1 0%, #00DBDB 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #00D1D1), color-stop(1, #00DBDB));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top left, #00D1D1 0%, #00DBDB 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom right, #00D1D1 0%, #00DBDB 100%);
+}

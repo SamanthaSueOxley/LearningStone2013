@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<!-- Author: Samantha Oxley & Yumeng Sun 
+	Learning Stone LLC. All rights reserved. -->
+<head>
+	<meta charset="utf-8">
+	<title>Edit Your Deck</title>
+	<!-- <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' /> -->
+	<link rel='stylesheet' type='text/css' href='css/header.css' />
+	<link rel='stylesheet' type='text/css' href='css/newDeck.css' />
+	<link rel='stylesheet' type='text/css' href='css/cardEditStyles.css' />
+	<link rel='stylesheet' type='text/css' href='css/smoothDivScroll.css' />
+	
+	<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+ 	<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+  	<script type='text/javascript' src='tinymce/tinymce.min.js'></script>
+ 	<script type='text/javascript' src='js/jquery.kinetic.js'></script>
+	<script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
+	<script type='text/javascript' src='js/jquery.smoothDivScroll-1.3.js'></script>
+</head>
+<body>
+	<header>
+		<nav id='indexbanner'>
+			<img id="logo" alt="learningstone logo" src="images/lslogo.png">
+			<ul>
+				<li><img id="study" alt="study your deck!" src="images/study.png"></li>
+			</ul>
+		</nav>
+	</header>
+	<div id='outerwrapper'>
+		<div id='wrapper'>
+			<div id='breadcrumb'>
+			</div>
+			<div id='topitems'>
+				<span><input id='cardNum' type='number' min='1' size='3' value='1'></span>
+				<img id='trash' src='images/trash.png' title='trash this card' alt='trash this card'>
+			</div>
+			<div id='middleitems'>
+				<img id='addBefore' class='newCards' src='images/add.png' width='30px' height='30px' title='New Card Before'>
+				<section id='front'>
+					<div id='editBar1' class='editBar'>
+						<div id='textEdit' class='edit_icon' ></div>
+						<div id='paintTool' class='edit_icon' ></div>
+						<div id='drawTool' class='edit_icon' ></div>
+						<div id='eraseTool' class='edit_icon' ></div>
+						<div id='eTool' class='edit_icon' ></div>
+						<div id='imageTool' class='edit_icon' ></div>
+						<span id='subPaintTool'>
+							<div id='xlBrush' class='edit_icon'></div>
+							<div id='lBrush' class='edit_icon'></div>
+							<div id='mBrush' class='edit_icon'></div>
+							<div id='sBrush' class='edit_icon'></div>
+						</span>
+						<span id='subDrawTool'>
+							<div id='xlPen' class='edit_icon'></div>
+							<div id='lPen' class='edit_icon'></div>
+							<div id='mPen' class='edit_icon'></div>
+							<div id='aPen' class='edit_icon'></div>
+						</span>
+						<span id='subEraseTool'>
+							<div id='xlEraser' class='edit_icon'></div>
+							<div id='lEraser' class='edit_icon'></div>
+							<div id='mEraser' class='edit_icon'></div>
+							<div id='sEraser' class='edit_icon'></div>
+						</span>
+						<span id='subImageTool'>
+							<div id='noImage' class='edit_icon ImgLayoutButt'></div>
+							<div id='leftImage' class='edit_icon ImgLayoutButt'></div>
+							<div id='rightImage' class='edit_icon ImgLayoutButt'></div>
+							<div id='botImage' class='edit_icon ImgLayoutButt'></div>
+							<div id='fullImage' class='edit_icon ImgLayoutButt'></div>
+						</span>
+					</div>
+					<section id='side1' class='cardSides'>
+					<div id='starCard' class='starCard'></div>
+					<div id='content1' class='textfill'></div>
+					<div id='imgContent1'>
+						<!-- <div>
+							<p id='closeImg1'>Close</p> -->
+							<!-- DOES NOT YET FUNCTION 
+							<p class='imgDivText'>drag media here</p>
+							<input id='chooseImg1' type='file' accept="image/*"/>
+							<p class='imgDivText'>Images under the size of a bean</p> -->
+						<!-- </div> -->
+						<div class='urlDiv'>
+							<input id='img1' type='url' placeHolder='Enter image URL' class='imgURL'/>
+							<div id='imgConfirm1'>&rarr;</div>
+						</div>
+					</div>
+					</section>
+				</section>
+				<section id='back'>
+					<div id='editBar2' class='editBar'>
+						<div id='textEditB' class='edit_icon' ></div>
+						<div id='paintToolB' class='edit_icon' ></div>
+						<div id='drawToolB' class='edit_icon' ></div>
+						<div id='eraseToolB' class='edit_icon' ></div>
+						<div id='eToolB' class='edit_icon' ></div>
+						<div id='imageToolB' class='edit_icon' ></div>
+						<span id='subPaintToolB'>
+							<div id='xlBrushB' class='edit_icon'></div>
+							<div id='lBrushB' class='edit_icon'></div>
+							<div id='mBrushB' class='edit_icon'></div>
+							<div id='sBrushB' class='edit_icon'></div>
+						</span>
+						<span id='subDrawToolB'>
+							<div id='xlPenB' class='edit_icon'></div>
+							<div id='lPenB' class='edit_icon'></div>
+							<div id='mPenB' class='edit_icon'></div>
+							<div id='sPenB' class='edit_icon'></div>
+						</span>
+						<span id='subEraseToolB'>
+							<div id='xlEraserB' class='edit_icon'></div>
+							<div id='lEraserB' class='edit_icon'></div>
+							<div id='mEraserB' class='edit_icon'></div>
+							<div id='sEraserB' class='edit_icon'></div>
+						</span>
+						<span id='subImageToolB'>
+							<div id='noImageB' class='edit_icon ImgLayoutButt'></div>
+							<div id='leftImageB' class='edit_icon ImgLayoutButt'></div>
+							<div id='rightImageB' class='edit_icon ImgLayoutButt'></div>
+							<div id='botImageB' class='edit_icon ImgLayoutButt'></div>
+							<div id='fullImageB' class='edit_icon ImgLayoutButt'></div>
+						</span>
+					</div>
+					<section id='side2' class='cardSides'>
+					<div id='content2' class='textfill'></div>
+					<div id='imgContent2'>
+						<!-- <div> -->
+							<!-- DOES NOT YET FUNCTION
+							<p class='imgDivText'>drag media here</p>
+							<input id='chooseImg2' type='file' accept="image/*"/>
+							<p class='imgDivText'>Images under the size of a bean</p> -->
+						<!-- </div> -->
+						<div class='urlDiv'>
+							<input id='img2' type='url' placeHolder='Enter image URL' class='imgURL'/>
+							<div id='imgConfirm2'>&rarr;</div>
+						</div>
+					</div>
+					</section>
+				</section>
+				<img id='addAfter' class='newCards' src='images/add.png' width='30px' height='30px' title='New Card after'>
+			</div>
+			<div id='bottomitems'>
+				<span id='previousCard' class='goes'>Previous Card</span>
+				<span id='nextCard' class='goes'>Next Card</span>
+				<section id='color'>
+					<span id='colors'>
+						<img id='colorSelector' alt='color select' src='images/color_bar.png'>
+						<span id='colorMenu'>
+							<img id='blueCard' title='blue card' alt='blue card' src='images/blueCard.png'>
+							<img id='greenCard' title='green card' alt='green card' src='images/greenCard.png'>
+							<img id='whiteCard' title='white card' alt='white card' src='images/whiteCard.png'>
+							<img id='pinkCard' title='pink card' alt='pink card' src='images/blueCard.png'>
+							<img id='orangeCard' title='orange card' alt='orange card' src='images/orangeCard.png'>
+							<img id='purpleCard' title='purple card' alt='purple card' src='images/purpleCard.png'>
+						</span>
+					</span>
+				</section>
+				<button id='saveChangesBtn' class="btn btn-success">Done</button> 
+				<span id='saving'></span>
+				<div id='cardScroll'>
+				</div>
+				<img id='spreadCards' src='images/spreadCards.png' alt='view all cards'>
+			</div>
+		</div>
+	</div>
+	<footer>
+	<p>Learning Stone LLC</p>
+	</footer>
+	<div id="galleryPane">
+		<ol id="galleryList">
+		</ol>
+		<button id="closeGalleryButton" type="button">close</button>
+	</div>
+</body>
+<!-- JAVASCRIPT HERE SO IT EXECUTES LAST, THE DOM WILL BREAK IF IT EXECUTES BEFORE THE HTML WAS LOADED -->
+	<script type='text/javascript' src='scripts/Side.js'></script>
+	<script type='text/javascript' src='scripts/Deck.js'></script>
+	<script type='text/javascript' src='scripts/Card.js'></script>
+	<script type='text/javascript' src='scripts/newDeck.js'></script>
+	<script type='text/javascript' src='scripts/localstorage.js'></script>
+</html>

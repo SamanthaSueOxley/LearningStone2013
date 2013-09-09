@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Welcome Home</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+		<script type='text/javascript' src='scripts/jquery.multiselect.js'></script>
+<!-- 		<script type='text/javascript' src='scripts/jquery-1.10.2.js'></script> -->
+ 		<script type='text/javascript' src='scripts/jquery-ui-1.10.3.custom.js'></script>
+ 		<script type='text/javascript' src='scripts/jquery.tools.min.js'></script>
+ 		<script type='text/javascript' src='scripts/localstorage.js'></script>
+ 		<script type='text/javascript' src='scripts/Deck.js'></script>
+ 		<script type='text/javascript' src='scripts/userhome.js'></script>
+ 		<link rel='stylesheet' type='text/css' href='css/jquery-ui-1.10.3.custom.css' />
+		<link rel='stylesheet' type='text/css' href='css/header.css' />
+ 		<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' />
+ 		<link rel='stylesheet' type='text/css' href='css/userhomeStylesheet.css' />
+		<link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/cupertino/jquery-ui.css' type='text/css' media='screen'>
+		<link rel='stylesheet' href='css/jquery.multiselect.css' type='text/css' media='screen'>
+	</head>
+	<body>
+		<header> <!-- header banner -->
+        	<nav id='indexbanner'>
+				<img id="logo" alt="learningstone logo" src="images/lslogo.png">
+				<ul>
+					<li><img id="studyNinja" alt="study your deck!" src="images/study.png"></li>
+					<li><img id="newFolder" alt="Create new folder!" src="images/new_folder.png"></li>
+					<li><img id="newDeck" alt="Create new flashcard!" src="images/new_flashcard.png"></li>
+				</ul>
+            </nav>
+        </header>
+		<div id="outerwrapper"> <!-- content -->
+			<div id="wrapper">
+				<ul id="breadcrumb">
+				</ul>
+				<div id='content'>
+				</div>
+			</div>
+		</div>
+		<div id='lightboxBackground'></div>
+		<!-- Footer --> 
+		<footer>
+		<p>&copy; copyright The Learning Stone, LLC</p> 
+		</footer>
+		<!-- New Folder Lightbox -->
+		<section id='newF'>
+				<legend>Create New Folder</legend>
+				<label for="folderName">New Folder Name:</label>
+				<br>
+				<input id='folderName' name='folderName' type='text' placeHolder='New Folder Name' />
+				<br>
+				<label for="newFolderColor">New Folder Color:</label>
+				<br>
+				<input id='newFolderColor' name='newFolderColor' type='color'>
+				<br>
+				<button id="createNewFolder"  class="btn btn-success" type="button" >Create</button> 
+				<button id="cancelCreateNewFolder"  class="btn btn-success" type="button" >Cancel</button> 
+
+		</section>
+		<!-- New Deck Lightbox -->
+		<section id='newD'>
+				<legend>Create New Deck</legend>
+				<label for="deckName">New Deck Name:</label>
+				<br>
+				<input id='deckName' name='deckName' type='text' placeHolder='New Deck Name' />
+				<br>
+				<button id="createNewDeck"  class="btn btn-success" type="button" >Create</button> 
+				<button id="cancelCreateNewDeck"  class="btn btn-success" type="button" >Cancel</button> 
+		</section>
+		<!-- Display Current Folder's Decks Lightbox -->
+		<section id='currentFolderDeckList'>
+				<legend>Select a Deck To Study</legend>
+				<!--<input id='selDeckName' name='selDeckName' type='text' placeHolder='Select Deck' />-->
+				<br>
+				<select multiple id="selectFolderDeckList">
+				</select>
+				<br>
+				<button id="studyDeck"  class="btn btn-success" type="button" >Study Deck</button> 
+				<button id="cancelStudyDeck"  class="btn btn-success" type="button" >Cancel</button> 
+		</section>
+	</body>
+</html>
